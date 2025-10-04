@@ -1,0 +1,54 @@
+/* Arrière-plan (Backdrop) du modal */
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8); /* Fond noir semi-transparent */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Assure que le modal est au-dessus du reste du contenu */
+}
+
+/* Contenu du modal (l'image et la légende) */
+.modal-content {
+  position: relative;
+  max-width: 90%;
+  max-height: 90%;
+  /* Empêche le clic sur le contenu de fermer la modale via le backdrop */
+  pointer-events: auto;
+}
+
+/* Image à l'intérieur du modal */
+.modal-image {
+  display: block;
+  max-width: 100%;
+  max-height: 80vh; /* Limite la hauteur à 80% de la hauteur de la vue */
+  border-radius: 5px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Bouton de fermeture (X) */
+.modal-close-button {
+  position: absolute;
+  top: -30px; /* Positionné au-dessus de l'image */
+  right: -30px;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 2em;
+  cursor: pointer;
+  line-height: 1;
+  z-index: 1001;
+}
+
+/* Légende sous l'image */
+.modal-caption {
+  text-align: center;
+  color: white;
+  margin-top: 10px;
+  font-size: 1.2em;
+  font-weight: 500;
+}
